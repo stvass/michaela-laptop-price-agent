@@ -1,0 +1,40 @@
+# Michaela Laptop Price Agent
+# Goal: find a powerful laptop for Blender/Maya school work without paying too much.
+# Add real product/search-result URLs from Best Buy, Micro Center, Lenovo, Dell, B&H, Walmart, etc.
+# Keep the list small and polite: 5-20 URLs, checked once or twice per day.
+
+settings:
+  create_github_issue_alerts: true
+  issue_label: laptop-price-alert
+  max_total_price_default: 2500
+  currency: USD
+
+requirements:
+  # For Blender/Maya school animation work.
+  min_ram_gb: 32
+  preferred_ram_gb: 64
+  min_ssd_gb: 1000
+  # NVIDIA GPUs are usually the easiest path for Blender CUDA/OptiX rendering.
+  acceptable_gpus:
+    - RTX 5090
+    - RTX 5080
+    - RTX 4090
+    - RTX 4080
+    - RTX 5070 Ti
+    - RTX 5070
+    - RTX 4070
+  avoid_if_title_contains:
+    - Chromebook
+    - RTX 4050
+    - RTX 3050
+    - GTX
+
+watch_items:
+  # Replace these examples with real product URLs you are considering.
+  # For each item, set the price where you would be happy buying.
+  - name: Example - Lenovo Legion / RTX 4070 or better
+    url: "https://www.example.com/paste-real-product-url-here"
+    max_total_price: 2200
+  - name: Example - ASUS ROG / RTX 5080 target
+    url: "https://www.example.com/paste-real-product-url-here"
+    max_total_price: 2900
