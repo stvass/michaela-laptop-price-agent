@@ -1,36 +1,144 @@
 [
   {
     "alert": false,
-    "checked_at": "2026-06-28T21:55:52.093097+00:00",
+    "checked_at": "2026-06-28T22:16:11.244080+00:00",
+    "detected_gpu": null,
+    "detected_ram_gb": null,
+    "detected_ssd_gb": null,
+    "max_total_price": 2100.0,
+    "name": "Best Buy - Lenovo Legion Pro 5i - RTX 5070 - 32GB - 1TB",
+    "ok": false,
+    "price": null,
+    "reasons": [
+      "Fetch failed: HTTPSConnectionPool(host='www.bestbuy.com', port=443): Read timed out. (read timeout=25)"
+    ],
+    "score": 0,
+    "title": null,
+    "url": "https://www.bestbuy.com/product/lenovo-legion-pro-5i-16-2-5k-oled-gaming-laptop-intel-core-ultra-9-275hx-2025-32gb-ram-nvidia-geforce-rtx-5070-1tb-eclipse-black/JJGSHXJRCS/sku/6617090"
+  },
+  {
+    "alert": false,
+    "checked_at": "2026-06-28T22:16:36.430086+00:00",
     "detected_gpu": null,
     "detected_ram_gb": null,
     "detected_ssd_gb": null,
     "max_total_price": 2200.0,
-    "name": "Example - Lenovo Legion / RTX 4070 or better",
+    "name": "Best Buy - Acer Predator Helios Neo 16S - RTX 5070 Ti - 32GB - 1TB",
     "ok": false,
     "price": null,
     "reasons": [
-      "Replace example URL with a real retailer product URL."
+      "Fetch failed: HTTPSConnectionPool(host='www.bestbuy.com', port=443): Read timed out. (read timeout=25)"
     ],
     "score": 0,
     "title": null,
-    "url": "https://www.example.com/paste-real-product-url-here"
+    "url": "https://www.bestbuy.com/product/acer-predator-helios-neo-16s-ai-gaming-laptop-16-oled-240hz-intel-core-ultra-9-nvidia-geforce-rtx-5070ti-32gb-1tb-obsidian-black/JJ8V8H38XT"
   },
   {
     "alert": false,
-    "checked_at": "2026-06-28T21:55:52.093116+00:00",
+    "checked_at": "2026-06-28T22:17:01.627055+00:00",
+    "detected_gpu": null,
+    "detected_ram_gb": null,
+    "detected_ssd_gb": null,
+    "max_total_price": 2400.0,
+    "name": "Best Buy - Alienware 16X Aurora - RTX 5070 - 32GB - 2TB",
+    "ok": false,
+    "price": null,
+    "reasons": [
+      "Fetch failed: HTTPSConnectionPool(host='www.bestbuy.com', port=443): Read timed out. (read timeout=25)"
+    ],
+    "score": 0,
+    "title": null,
+    "url": "https://www.bestbuy.com/product/alienware-16x-aurora-16-2-5k-gaming-laptop-intel-core-ultra-9-series-2-275hx-2025-32gb-memory-nvidia-geforce-rtx-5070-2tb-storage-interstellar-indigo/J3K4L6J6FG/sku/6631435"
+  },
+  {
+    "alert": false,
+    "checked_at": "2026-06-28T22:17:26.692044+00:00",
     "detected_gpu": null,
     "detected_ram_gb": null,
     "detected_ssd_gb": null,
     "max_total_price": 2900.0,
-    "name": "Example - ASUS ROG / RTX 5080 target",
+    "name": "Best Buy - ASUS ROG Strix G18 - RTX 5080 - 32GB - 2TB",
     "ok": false,
     "price": null,
     "reasons": [
-      "Replace example URL with a real retailer product URL."
+      "Fetch failed: HTTPSConnectionPool(host='www.bestbuy.com', port=443): Read timed out. (read timeout=25)"
     ],
     "score": 0,
     "title": null,
-    "url": "https://www.example.com/paste-real-product-url-here"
+    "url": "https://www.bestbuy.com/product/asus-rog-strix-g18-18-2-5k-240hz-gaming-laptop-intel-core-ultra-9-hx-32gb-ram-nvidia-geforce-rtx-5080-2tb-ssd-eclipse-gray/JJGGLHXFW8/sku/6613958"
+  },
+  {
+    "alert": false,
+    "checked_at": "2026-06-28T22:17:51.740898+00:00",
+    "detected_gpu": null,
+    "detected_ram_gb": null,
+    "detected_ssd_gb": null,
+    "max_total_price": 2800.0,
+    "name": "Best Buy - ASUS ROG Zephyrus G16 OLED - RTX 5080 - 32GB - 2TB",
+    "ok": false,
+    "price": null,
+    "reasons": [
+      "Fetch failed: HTTPSConnectionPool(host='www.bestbuy.com', port=443): Read timed out. (read timeout=25)"
+    ],
+    "score": 0,
+    "title": null,
+    "url": "https://www.bestbuy.com/product/asus-rog-zephyrus-g16-16-oled-2-5k-240hz-gaming-laptop-intel-core-ultra-9-32gb-ram-nvidia-geforce-rtx-5080-2tb-ssd-eclipse-gray/JJGGLHJLTW/sku/10936987"
+  },
+  {
+    "alert": false,
+    "checked_at": "2026-06-28T22:18:16.914253+00:00",
+    "detected_gpu": null,
+    "detected_ram_gb": null,
+    "detected_ssd_gb": null,
+    "max_total_price": 2900.0,
+    "name": "Lenovo - Legion Pro 7i Gen 10 - RTX 50 Series",
+    "ok": false,
+    "price": 2759.92,
+    "reasons": [
+      "Could not detect acceptable GPU from page text/title.",
+      "Could not detect RAM.",
+      "Could not detect SSD size.",
+      "Price is at/below target: $2,759.92 <= $2,900.00"
+    ],
+    "score": 40,
+    "title": "Legion Pro 7i Gen 10 (16\u2033 Intel) Gaming Laptop",
+    "url": "https://www.lenovo.com/us/en/p/laptops/legion-laptops/legion-pro-series/legion-pro-7i-gen-10-16-inch-intel/len101g0039"
+  },
+  {
+    "alert": false,
+    "checked_at": "2026-06-28T22:18:17.726990+00:00",
+    "detected_gpu": null,
+    "detected_ram_gb": null,
+    "detected_ssd_gb": null,
+    "max_total_price": 3000.0,
+    "name": "B&H - Lenovo Legion Pro 7i 16",
+    "ok": false,
+    "price": null,
+    "reasons": [
+      "Fetch failed: 403 Client Error: Forbidden for url: https://www.bhphotovideo.com/c/product/1875947-REG/lenovo_83f50018us_16_legion_pro_7i.html"
+    ],
+    "score": 0,
+    "title": null,
+    "url": "https://www.bhphotovideo.com/c/product/1875947-REG/lenovo_83f50018us_16_legion_pro_7i.html"
+  },
+  {
+    "alert": true,
+    "checked_at": "2026-06-28T22:18:17.855658+00:00",
+    "detected_gpu": "RTX 5080",
+    "detected_ram_gb": 64,
+    "detected_ssd_gb": 4000,
+    "max_total_price": 2300.0,
+    "name": "Dell - Alienware m18 R2",
+    "ok": true,
+    "price": 1899.99,
+    "reasons": [
+      "GPU detected: RTX 5080",
+      "RAM OK: 64 GB",
+      "SSD OK: 4000 GB",
+      "Price is at/below target: $1,899.99 <= $2,300.00"
+    ],
+    "score": 170,
+    "title": "Alienware m18 R2 Gaming Laptop",
+    "url": "https://www.dell.com/en-us/shop/dell-laptops/alienware-m18-r2-gaming-laptop/spd/alienware-m18-r2-laptop"
   }
 ]
