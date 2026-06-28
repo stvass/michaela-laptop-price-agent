@@ -3,11 +3,11 @@ name: Michaela Laptop Price Watch
 on:
   workflow_dispatch:
   schedule:
-    # Runs daily. This is UTC time.
-    - cron: "17 11 * * *"
+    - cron: "0 19 * * *"
+      timezone: "America/New_York"
 
 permissions:
-  contents: write
+  contents: read
   issues: write
 
 jobs:
@@ -29,12 +29,57 @@ jobs:
       - name: Run price agent
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python price_agent.py
-
-      - name: Commit latest price data
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/*.json data/*.md || true
-          git diff --cached --quiet || git commit -m "Update laptop price watch data"
-          git push
+          set +e
+          python price_agent.py > results.json 2> error.log
+          echo "----- Results -----"
+          cat results.json || true
+          echo "----- Errors -----"
+          cat error.log || true
+          exit 0
+
+      - name: Email results
+        if: always()
+        env:
+          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+        run: |
+          python - <<'PY'
+          import os
+          import smtplib
+          from email.message import EmailMessage
+          from pathlib import Path
+          from datetime import datetime
+
+          sender = os.environ["MAIL_USERNAME"]
+          password = os.environ["MAIL_PASSWORD"]
+          recipient = os.environ["MAIL_TO"]
+
+          results = Path("results.json").read_text() if Path("results.json").exists() else "No results file found."
+          errors = Path("error.log").read_text() if Path("error.log").exists() else ""
+
+          msg = EmailMessage()
+          msg["From"] = sender
+          msg["To"] = recipient
+          msg["Subject"] = "Michaela Laptop Price Report"
+
+          body = f"""Michaela Laptop Price Agent Results
+
+          Run time: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+
+          Results:
+          {results}
+
+          Errors:
+          {errors}
+          """
+
+          msg.set_content(body)
+
+          with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
+              smtp.login(sender, password)
+              smtp.send_message(msg)
+
+          print("Email sent.")
+          PY
